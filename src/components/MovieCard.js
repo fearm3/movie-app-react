@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const defaultImage =
@@ -6,6 +7,7 @@ const defaultImage =
 
 const MovieCard = (movie) => {
   const { title, poster_path, overview, vote_average } = movie;
+  const { currentUser } = useContext(AuthContext);
 
   const setVoteClass = (vote) => {
     if (vote >= 8) {
@@ -25,9 +27,11 @@ const MovieCard = (movie) => {
       />
       <div className="movie-info">
         <h3>Title</h3>
-        <span className={`tag ${setVoteClass(vote_average)}`}>
-          {vote_average}
-        </span>
+        {currentUser && (
+          <span className={`tag ${setVoteClass(vote_average)}`}>
+            {vote_average}
+          </span>
+        )}
       </div>
       <div className="movie-over">
         <h2>Overview</h2>
