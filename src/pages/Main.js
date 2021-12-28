@@ -26,7 +26,7 @@ const Main = () => {
     if (searchTerm) {
       getMovies(SEARCH_API + searchTerm);
     }
-    searchTerm("");
+    setSearchTerm("");
   };
 
   return (
@@ -39,6 +39,9 @@ const Main = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <button type="submit" className="ml-2">
+          Search
+        </button>
       </form>
       <div className="movie-container">
         {movies.map((movie) => (
