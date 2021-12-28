@@ -6,7 +6,7 @@
 
 body {
   background-color: #eee;
-  color: #fff;
+  color: #000;
   font-family: "Poppins", "sans-serif";
   margin: 0;
 }
@@ -23,9 +23,9 @@ body {
 }
 
 .movie {
-  background-color: #3F51B5;
+  background-color: #3f51b5;
   border-radius: 3px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 1rem;
   width: 300px;
@@ -102,10 +102,9 @@ body {
   border: none;
 }
 
-.form-control{
+.form-control {
   width: 300px;
   margin: 20px;
-
 }
 
 .navbar {
@@ -143,13 +142,12 @@ body {
 .form-title {
   text-align: center;
   margin-bottom: 3rem;
-} */
-
- .form-image { 
+}
+*/ .form-image {
   /* flex: 1; */
-   min-width: 800px;
+  min-width: 800px;
   min-height: 800px;
-} 
+}
 
 .buttons {
   display: flex;
@@ -162,7 +160,7 @@ body {
 }
 
 .link {
-  color: #0B5ED7;
+  color: #0b5ed7;
   text-decoration: underline;
   margin-left: 1.5rem;
   cursor: pointer;
