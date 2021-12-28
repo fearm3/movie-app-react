@@ -44,7 +44,7 @@ const Main = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit" className="ml-2">
+        <button type="submit" className="button ml-2">
           Search
         </button>
       </form>

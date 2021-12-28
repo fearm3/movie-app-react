@@ -20,10 +20,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
+  background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
 }
 
 .movie {
-  background-color: #3f51b5;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   border-radius: 3px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -47,11 +49,13 @@ body {
 
 .movie-info h3 {
   margin: 0;
+  color: #0d47a1;
 }
 
 .movie-over {
   position: absolute;
   background-color: #fff;
+  opacity: 0.6;
   color: #000;
   bottom: 0;
   left: 0;
@@ -60,7 +64,7 @@ body {
   max-height: 100%;
   padding: 1rem;
   transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .movie:hover .movie-over {
@@ -88,7 +92,7 @@ body {
 .search {
   width: 100%;
   justify-content: center;
-  background-color: #bdbdbd;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -148,11 +152,15 @@ body {
   min-width: 800px;
   min-height: 800px;
 }
-
+.button {
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  border-radius: 8px;
+}
 .buttons {
   display: flex;
   flex-direction: row;
   height: 50px;
+  /* color: #1b5e20; */
 }
 
 .buttons h3 {
