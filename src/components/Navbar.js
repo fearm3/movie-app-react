@@ -18,6 +18,11 @@ const Navbar = () => {
     await signOut(auth);
   };
 
+  const goHomePage = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +31,7 @@ const Navbar = () => {
             className="navbar-brand "
             href="/"
             style={{ color: "white" }}
-            onClick={() => navigate("/")}
+            onClick={goHomePage}
           >
             React Movie
           </a>

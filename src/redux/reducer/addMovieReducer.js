@@ -15,9 +15,9 @@ export const addMovieReducer = (state = initialState.movie, action) => {
       }
 
     case GET_MOVIE:
-      return [...state, action.payload];
+      return action.payload;
     case REMOVE_MOVIE:
-      return state.filter((item) => item.title !== action.payload);
+      return state.filter((item) => item.id !== action.payload);
 
     default: {
       return state;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaHeart } from "react-icons/fa";
+import { TiDelete } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
@@ -32,7 +32,11 @@ const FavouriteMovie = () => {
         return (
           <div className="movie" key={id}>
             <h2 className="d-flex justify-content-end">
-              <FaHeart onClick={() => dispatch(removeMovieApi(title))} />
+              <TiDelete
+                color="red"
+                size={30}
+                onClick={() => dispatch(removeMovieApi(id))}
+              />
             </h2>
             <img src={IMG_API + poster_path} alt={title} />
             <div className="movie-info">
@@ -40,7 +44,6 @@ const FavouriteMovie = () => {
               <span className={`tag ${setVoteClass(vote_average)}`}>
                 {vote_average}
               </span>
-              )
             </div>
           </div>
         );
@@ -48,5 +51,4 @@ const FavouriteMovie = () => {
     </div>
   );
 };
-
 export default FavouriteMovie;

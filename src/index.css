@@ -147,7 +147,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 }
-*/ .form-image {
+.form-image {
   /* flex: 1; */
   min-width: 800px;
   min-height: 800px;

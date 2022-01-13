@@ -13,9 +13,9 @@ export const removeMovie = (payload) => {
     payload,
   };
 };
-export const removeMovieApi = (title) => {
+export const removeMovieApi = (id) => {
   return (dispatch) => {
-    dispatch(removeMovie(title));
+    dispatch(removeMovie(id));
   };
 };
 
