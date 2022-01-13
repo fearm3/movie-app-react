@@ -20,17 +20,17 @@ const setVoteClass = (vote) => {
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const FavouriteMovie = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMovie());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getMovie());
+  // }, []);
   const movie = useSelector((state) => state.addMovieReducer);
   console.log("movie", movie);
   return (
     <div className="movie-container">
       {movie?.map((item) => {
-        const { title, poster_path, overview, vote_average } = item;
+        const { title, poster_path, overview, vote_average, id } = item;
         return (
-          <div className="movie">
+          <div className="movie" key={id}>
             <h2 className="d-flex justify-content-end">
               <FaHeart onClick={() => dispatch(removeMovieApi(title))} />
             </h2>

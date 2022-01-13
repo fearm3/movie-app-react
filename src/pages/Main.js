@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import MovieCard from "../components/MovieCard";
 import { AuthContext } from "../context/AuthContext";
 
@@ -11,6 +12,9 @@ const Main = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const { currentUser } = useContext(AuthContext);
+  const movie = useSelector((state) => state.addMovieReducer);
+
+  console.log("main movie", movie);
 
   useEffect(() => {
     getMovies(FEATURED_API);

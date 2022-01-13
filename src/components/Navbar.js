@@ -22,7 +22,12 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid d-flex justify-content-between">
-          <a className="navbar-brand " href="/" style={{ color: "white" }}>
+          <a
+            className="navbar-brand "
+            href="/"
+            style={{ color: "white" }}
+            onClick={() => navigate("/")}
+          >
             React Movie
           </a>
           {movie && (

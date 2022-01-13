@@ -7,12 +7,15 @@ const initialState = {
 export const addMovieReducer = (state = initialState.movie, action) => {
   switch (action.type) {
     case ADD_MOVIE:
-      return state.findIndex((index) => index.title !== action.payload.title)
-        ? state.push(action.payload)
-        : null;
+      let addedItem = state.find((c) => c.title === action.payload.title);
+      if (addedItem) {
+        return state;
+      } else {
+        return [...state, action.payload];
+      }
 
     case GET_MOVIE:
-      return [...state];
+      return [...state, action.payload];
     case REMOVE_MOVIE:
       return state.filter((item) => item.title !== action.payload);
 
