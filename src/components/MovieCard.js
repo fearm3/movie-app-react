@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { FaHeart } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addMovieApi } from "../redux/actions/addFavoriteActions";
+import { useNavigate } from "react-router-dom";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const defaultImage =
@@ -9,7 +12,8 @@ const defaultImage =
 const MovieCard = (movie) => {
   const { title, poster_path, overview, vote_average } = movie;
   const { currentUser } = useContext(AuthContext);
-
+  const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const setVoteClass = (vote) => {
     if (vote >= 8) {
       return "green";
@@ -20,14 +24,16 @@ const MovieCard = (movie) => {
     }
   };
 
-  addFavouriteMovie = () => {
-    null;
+  const addFavoriteMovie = (e) => {
+    e.preventDefault();
+
+    dispatch(addMovieApi(movie));
   };
 
   return (
     <div className="movie">
       <h2 className="d-flex justify-content-end">
-        <FaHeart onClick={addFavouriteMovie()} />
+        <FaHeart onClick={addFavoriteMovie} />
       </h2>
       <img
         src={poster_path ? IMG_API + poster_path : defaultImage}

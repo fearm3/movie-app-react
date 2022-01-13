@@ -1,26 +1,25 @@
-import { ADD_MOVIE } from "../types/addFavoriteTypes";
+import { ADD_MOVIE, GET_MOVIE, REMOVE_MOVIE } from "../types/addFavoriteTypes";
 
 const initialState = {
-  counter: 0,
-  list: [
-    {
-      id: 0,
-      text: "Add Todo",
-      completed: false,
-    },
-  ],
+  movie: [],
 };
 
-const addMovieReducer = (state = initialState, action) => {
+export const addMovieReducer = (state = initialState.movie, action) => {
   switch (action.type) {
     case ADD_MOVIE:
-      return {
-        counter: state.counter + 1,
-        list: [
-          ...state.list,
-          { id: state.counter + 1, text: action.payload, completed: false },
-        ],
-    
+      return state.findIndex((index) => index.title !== action.payload.title)
+        ? state.push(action.payload)
+        : null;
+
+    case GET_MOVIE:
+      return [...state];
+    case REMOVE_MOVIE:
+      return state.filter((item) => item.title !== action.payload);
+
+    default: {
+      return state;
+    }
+  }
 };
 
-export default addMovieReducer;
+// [...state, action.payload];
