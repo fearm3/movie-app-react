@@ -8,6 +8,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { currentUser } = useContext(AuthContext);
 
+  console.log("currentUser", currentUser);
+
   const signOutFunc = async () => {
     await signOut(auth);
   };

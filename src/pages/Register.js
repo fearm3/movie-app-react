@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState();
-  const [lastName, setlastName] = useState();
+  const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -17,6 +17,7 @@ const Register = () => {
       await updateProfile(auth.currentUser, { displayName: displayName });
       console.log(auth.currentUser);
       navigate("/");
+      console.log(user);
     } catch (error) {
       alert(error.message);
     }
@@ -51,7 +52,7 @@ const Register = () => {
               className="form-control"
               id="last-name"
               placeholder="Enter your last name..."
-              onChange={(e) => setlastName(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <div className="mb-3">

@@ -25,7 +25,7 @@ const Main = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //*serchTerm and currentUser handled
+    //*searchTerm and currentUser handled
     if (searchTerm && currentUser) {
       getMovies(SEARCH_API + searchTerm);
     } else {
@@ -40,7 +40,7 @@ const Main = () => {
         <input
           type="search"
           className="search-input"
-          placeholder="Seach a movie..."
+          placeholder="Search a movie..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
