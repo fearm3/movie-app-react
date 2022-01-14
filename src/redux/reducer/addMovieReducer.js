@@ -25,4 +25,4 @@ export const addMovieReducer = (state = initialState.movie, action) => {
   }
 };
 
-// [...state, action.payload];
+

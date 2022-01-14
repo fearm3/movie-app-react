@@ -38,7 +38,7 @@ const Navbar = () => {
           {movie && (
             <AiFillStar
               onClick={() => navigate("/Favourite")}
-              style={{ fontSize: "2rem" }}
+              style={{ fontSize: "2rem", color: "yellow" }}
             />
           )}
 
