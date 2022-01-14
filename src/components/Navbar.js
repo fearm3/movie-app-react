@@ -36,10 +36,13 @@ const Navbar = () => {
             React Movie
           </a>
           {movie && (
-            <AiFillStar
+            <div
+              className="d-flex flex-direction-row "
               onClick={() => navigate("/Favourite")}
-              style={{ fontSize: "2rem", color: "yellow" }}
-            />
+            >
+              <AiFillStar className="star" />
+              <h5>Favorite</h5>
+            </div>
           )}
 
           <div className="buttons">

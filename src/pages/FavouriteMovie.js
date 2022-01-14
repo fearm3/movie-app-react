@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { TiDelete } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
-  getMovie,
-  removeMovie,
+  // getMovie,
+  // removeMovie,
   removeMovieApi,
 } from "../redux/actions/addFavoriteActions";
 
@@ -28,7 +28,7 @@ const FavouriteMovie = () => {
   return (
     <div className="movie-container">
       {movie?.map((item) => {
-        const { title, poster_path, overview, vote_average, id } = item;
+        const { title, poster_path, vote_average, id } = item;
         return (
           <div className="movie" key={id}>
             <h2 className="d-flex justify-content-end">

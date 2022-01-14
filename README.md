@@ -4,4 +4,9 @@
 
 ### Redux
 
+### Context
+
 ### React icons
+
+![movie_app](/movie_app.gif)
+

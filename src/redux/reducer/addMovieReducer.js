@@ -7,7 +7,7 @@ const initialState = {
 export const addMovieReducer = (state = initialState.movie, action) => {
   switch (action.type) {
     case ADD_MOVIE:
-      let addedItem = state.find((c) => c.title === action.payload.title);
+      let addedItem = state.find((c) => c.id === action.payload.id);
       if (addedItem) {
         return state;
       } else {
@@ -24,5 +24,3 @@ export const addMovieReducer = (state = initialState.movie, action) => {
     }
   }
 };
-
-
