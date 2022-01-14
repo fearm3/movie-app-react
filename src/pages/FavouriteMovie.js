@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TiDelete } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
+  getMovieApi,
   // getMovie,
   // removeMovie,
   removeMovieApi,
@@ -23,6 +24,10 @@ const FavouriteMovie = () => {
   const dispatch = useDispatch();
   const movie = useSelector((state) => state.addMovieReducer);
   // console.log("movie", movie);
+  useEffect(() => {
+    dispatch(getMovieApi());
+  }, [dispatch]);
+
   return (
     <div className="movie-container">
       {movie?.map((item) => {

@@ -13,13 +13,12 @@ const Navbar = () => {
 
   console.log("currentUser", currentUser);
 
-
   //this function from firebase to last login
   const signOutFunc = async () => {
     await signOut(auth);
+    localStorage.clear();
   };
 
-  
   const goHomePage = (e) => {
     e.preventDefault();
     navigate("/");

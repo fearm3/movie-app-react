@@ -31,9 +31,10 @@ export const getMovie = (payload) => {
     payload,
   };
 };
-export const getMovieApi = (payload) => {
+export const getMovieApi = () => {
   return (dispatch) => {
-    dispatch(getMovieApi(payload));
+    const data = JSON.parse(localStorage.getItem("favouriteMovies"));
+    dispatch(getMovie(data));
   };
 };
 // export const toggleTodo = (payload) => {
