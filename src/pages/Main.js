@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "../components/MovieCard";
 import { AuthContext } from "../context/AuthContext";
-
+//api for search bar
 const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?api_key=d6278b3dc3e6f8f8376a89851c3f8c8f";
 const SEARCH_API =
