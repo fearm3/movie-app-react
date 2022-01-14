@@ -33,7 +33,9 @@ const MovieCard = (movie) => {
   return (
     <div className="movie">
       <h2 className="d-flex justify-content-end">
-        <FaHeart onClick={addFavoriteMovie} style={{ color: "red" }} />
+        {currentUser && (
+          <FaHeart onClick={addFavoriteMovie} style={{ color: "red" }} />
+        )}
       </h2>
       <img
         src={poster_path ? IMG_API + poster_path : defaultImage}

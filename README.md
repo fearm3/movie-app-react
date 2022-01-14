@@ -8,5 +8,8 @@
 
 ### React icons
 
-![movie_app](/movie_app.gif)
+### LocalStorage
 
+
+
+![movie_app](/movie_app.gif)
