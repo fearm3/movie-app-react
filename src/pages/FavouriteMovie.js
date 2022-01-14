@@ -27,7 +27,7 @@ const FavouriteMovie = () => {
       {movie.length === 0 ? (
         <h3 style={{ marginTop: "5rem", color: "#000" }}>No added movie</h3>
       ) : (
-        movie.map((item) => {
+        movie?.map((item) => {
           const { title, poster_path, vote_average, id } = item;
           return (
             <div className="movie" key={id}>

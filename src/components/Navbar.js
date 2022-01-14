@@ -36,7 +36,7 @@ const Navbar = () => {
           >
             React Movie
           </a>
-          {currentUser && movie && (
+          {currentUser && movie !== null && movie !== undefined && movie !== 0 && (
             <div
               className="d-flex flex-direction-row "
               onClick={() => navigate("/Favourite")}
