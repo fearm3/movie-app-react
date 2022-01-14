@@ -3,7 +3,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../auth/firebase-config";
 
 export const AuthContext = createContext();
-
+//Authentication 
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
 

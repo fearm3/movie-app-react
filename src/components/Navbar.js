@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../auth/firebase-config.js";
-// import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
@@ -14,10 +13,13 @@ const Navbar = () => {
 
   console.log("currentUser", currentUser);
 
+
+  //this function from firebase to last login
   const signOutFunc = async () => {
     await signOut(auth);
   };
 
+  
   const goHomePage = (e) => {
     e.preventDefault();
     navigate("/");

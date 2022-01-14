@@ -17,14 +17,12 @@ const setVoteClass = (vote) => {
     return "red";
   }
 };
+//api address
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const FavouriteMovie = () => {
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getMovie());
-  // }, []);
   const movie = useSelector((state) => state.addMovieReducer);
-  console.log("movie", movie);
+  // console.log("movie", movie);
   return (
     <div className="movie-container">
       {movie?.map((item) => {
@@ -40,7 +38,7 @@ const FavouriteMovie = () => {
             </h2>
             <img src={IMG_API + poster_path} alt={title} />
             <div className="movie-info">
-              <h3>Title</h3>
+              <h3>{title}</h3>
               <span className={`tag ${setVoteClass(vote_average)}`}>
                 {vote_average}
               </span>
