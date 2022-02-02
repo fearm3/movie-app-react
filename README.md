@@ -12,6 +12,8 @@
 
 ### LocalStorage
 
+### Deployed with Netlify https://movie-react-reduxs.netlify.app/
+
 
 
 ![movie_app](/movie_app.gif)
